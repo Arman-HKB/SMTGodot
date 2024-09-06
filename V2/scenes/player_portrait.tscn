@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/names.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/bars.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/portraits/portrait_default.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.521569, 0.14902, 0.14902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.14902, 0.25098, 0.521569, 1 )
+
+[node name="PlayerPortrait" type="HBoxContainer"]
+margin_left = 269.0
+margin_right = 437.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="."]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Container" type="VBoxContainer" parent="."]
+margin_left = 68.0
+margin_right = 168.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 64 )
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Label" type="Label" parent="Container"]
+margin_top = 1.0
+margin_right = 100.0
+margin_bottom = 26.0
+custom_fonts/font = ExtResource( 1 )
+text = "Player"
+uppercase = true
+
+[node name="HP" type="ProgressBar" parent="Container"]
+margin_top = 30.0
+margin_right = 100.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 100, 15 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Value" type="Label" parent="Container/HP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "9999/9999"
+align = 1
+valign = 1
+
+[node name="MP" type="ProgressBar" parent="Container"]
+margin_top = 49.0
+margin_right = 100.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 15 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Value" type="Label" parent="Container/MP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "9999/9999"
+align = 1
+valign = 1

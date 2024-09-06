@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="StyleBoxFlat" id=89]
+bg_color = Color( 0.521569, 0.14902, 0.14902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=90]
+bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+
+[node name="HP" type="ProgressBar"]
+margin_right = 100.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 100, 15 )
+custom_styles/fg = SubResource( 89 )
+custom_styles/bg = SubResource( 90 )
+max_value = 999.0
+percent_visible = false

@@ -7,15 +7,18 @@ A Shin Megami Tensei (SMT) like game made with Godot 3. One day for fun I decide
   <table>
     <tr>
       <td>
-        <img src="" style="width:100%">
+        <img src="https://github.com/Arman-HKB/SMTGodot/blob/develop/demo/map_editor.png" style="width:100%">
       </td>
       <td>
-        <img src="" style="width:100%">
+        <img src="https://github.com/Arman-HKB/SMTGodot/blob/develop/demo/npc.png" style="width:100%">
       </td>
     </tr>
     <tr>
       <td>
-        <img src="" style="width:100%">
+        <img src="https://github.com/Arman-HKB/SMTGodot/blob/develop/demo/in_game.png" style="width:100%">
+      </td>
+      <td>
+        <img src="https://github.com/Arman-HKB/SMTGodot/blob/develop/demo/in_battle.png" style="width:100%">
       </td>
     </tr>
   </table>

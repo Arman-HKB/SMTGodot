@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://scripts/enemy.gd" type="Script" id=1]
+[ext_resource path="res://assets/battlers/pixie.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Pixie"
+texture = ExtResource( 2 )
+max_hp = 60
+max_mp = 40
+current_hp = 60
+current_mp = 40
+strength = 2
+magic = 4
+vitality = 2
+agility = 2
+luck = 3
+weaknesses = [ [ "Phys", 1 ], [ "Pierce", 1 ], [ "Fire", 1 ], [ "Water", 0 ], [ "Elec", 2 ], [ "Wind", 2 ], [ "Sun", 0 ], [ "Moon", 1 ], [ "Almighty", 0 ] ]
+skills = [ [ "Pound", 1, 1, 20, 0, 0 ], [ "Tonitruum", 1, 1, 30, 4, 4 ], [ "Ventus", 1, 1, 30, 5, 4 ] ]

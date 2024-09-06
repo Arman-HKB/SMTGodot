@@ -1,0 +1,1486 @@
+[gd_scene load_steps=77 format=2]
+
+[ext_resource path="res://scenes/battle_camera.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/battle.gd" type="Script" id=2]
+[ext_resource path="res://assets/portraits/portrait_default.png" type="Texture" id=3]
+[ext_resource path="res://fonts/bars.tres" type="DynamicFont" id=4]
+[ext_resource path="res://assets/moon.png" type="Texture" id=5]
+[ext_resource path="res://assets/battlers/mermaid.png" type="Texture" id=6]
+[ext_resource path="res://fonts/names.tres" type="DynamicFont" id=7]
+[ext_resource path="res://fonts/menus.tres" type="DynamicFont" id=8]
+[ext_resource path="res://assets/bg/battle_bg.png" type="Texture" id=9]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.521569, 0.14902, 0.14902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+
+[sub_resource type="Animation" id=37]
+resource_name = "Cataracta"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.184314, 0.286275, 0.592157, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.184314, 0.286275, 0.592157, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=38]
+resource_name = "Ignis"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.592157, 0.184314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.592157, 0.184314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=41]
+resource_name = "Normal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=39]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 48 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "Tonitruum"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.592157, 0.584314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.592157, 0.584314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "Umbra"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.223529, 0.0941176, 0.45098, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.223529, 0.0941176, 0.45098, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=42]
+resource_name = "Ventus"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.184314, 0.592157, 0.227451, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.184314, 0.592157, 0.227451, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "Cataracta"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.184314, 0.286275, 0.592157, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.184314, 0.286275, 0.592157, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "Ignis"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.592157, 0.184314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.592157, 0.184314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=46]
+resource_name = "Normal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=47]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=48]
+resource_name = "Tonitruum"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.592157, 0.584314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.592157, 0.584314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=49]
+resource_name = "Umbra"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.223529, 0.0941176, 0.45098, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.223529, 0.0941176, 0.45098, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=50]
+resource_name = "Ventus"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.184314, 0.592157, 0.227451, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.184314, 0.592157, 0.227451, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=51]
+resource_name = "Cataracta"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.184314, 0.286275, 0.592157, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.184314, 0.286275, 0.592157, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=52]
+resource_name = "Ignis"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.592157, 0.184314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.592157, 0.184314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=53]
+resource_name = "Normal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=54]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=55]
+resource_name = "Tonitruum"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.592157, 0.584314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.592157, 0.584314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "Umbra"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.223529, 0.0941176, 0.45098, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.223529, 0.0941176, 0.45098, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=57]
+resource_name = "Ventus"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.184314, 0.592157, 0.227451, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.184314, 0.592157, 0.227451, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=58]
+resource_name = "Cataracta"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.184314, 0.286275, 0.592157, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.184314, 0.286275, 0.592157, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=59]
+resource_name = "Ignis"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.592157, 0.184314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.592157, 0.184314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=60]
+resource_name = "Normal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=61]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=62]
+resource_name = "Tonitruum"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.592157, 0.584314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.592157, 0.584314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=63]
+resource_name = "Umbra"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.223529, 0.0941176, 0.45098, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.223529, 0.0941176, 0.45098, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=64]
+resource_name = "Ventus"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.184314, 0.592157, 0.227451, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.184314, 0.592157, 0.227451, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=65]
+resource_name = "Cataracta"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.184314, 0.286275, 0.592157, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.184314, 0.286275, 0.592157, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=66]
+resource_name = "Ignis"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.592157, 0.184314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.592157, 0.184314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=67]
+resource_name = "Normal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=68]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=69]
+resource_name = "Tonitruum"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.592157, 0.584314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.592157, 0.584314, 0.184314, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=70]
+resource_name = "Umbra"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.223529, 0.0941176, 0.45098, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.223529, 0.0941176, 0.45098, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=71]
+resource_name = "Ventus"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.184314, 0.592157, 0.227451, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 0.184314, 0.592157, 0.227451, 0.478431 ), Color( 1, 1, 1, 0.607843 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 0.607843 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.14902, 0.25098, 0.521569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.196078, 0.333333, 0.376471, 1 )
+
+[sub_resource type="StyleBoxFlat" id=74]
+bg_color = Color( 0.0941176, 0.305882, 0.376471, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.211765, 0.454902, 0.533333, 1 )
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.211765, 0.454902, 0.533333, 1 )
+
+[sub_resource type="StyleBoxFlat" id=73]
+bg_color = Color( 0.207843, 0.423529, 0.490196, 1 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.286275, 0.501961, 0.572549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0.286275, 0.501961, 0.572549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=72]
+bg_color = Color( 0.240938, 0.436333, 0.501465, 1 )
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0.356863, 0.556863, 0.623529, 1 )
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0.356863, 0.556863, 0.623529, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 0.607843 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 5 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 5 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 5 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 5 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 5 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 5 )
+region = Rect2( 600, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 5 )
+region = Rect2( 700, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 5 )
+region = Rect2( 800, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 5 )
+region = Rect2( 900, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 5 )
+region = Rect2( 1000, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 5 )
+region = Rect2( 1100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 5 )
+region = Rect2( 1200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 5 )
+region = Rect2( 1300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 5 )
+region = Rect2( 1400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 0, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=29]
+animations = [ {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "moon",
+"speed": 5.0
+} ]
+
+[node name="Battle" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -960.0
+margin_top = -1040.0
+margin_right = 960.0
+margin_bottom = 40.0
+texture = ExtResource( 9 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.447059, 0.447059, 0.447059, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EnemyPanel" type="HBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -218.0
+margin_bottom = 10.0
+custom_constants/separation = 10
+alignment = 1
+
+[node name="EnemyContainerFirst" type="VBoxContainer" parent="EnemyPanel"]
+margin_left = 404.0
+margin_right = 620.0
+margin_bottom = 244.0
+
+[node name="Label" type="Label" parent="EnemyPanel/EnemyContainerFirst"]
+margin_right = 216.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 7 )
+text = "Demon"
+uppercase = true
+
+[node name="HP" type="ProgressBar" parent="EnemyPanel/EnemyContainerFirst"]
+margin_top = 29.0
+margin_right = 216.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 100, 15 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Enemy" type="TextureRect" parent="EnemyPanel/EnemyContainerFirst"]
+margin_top = 48.0
+margin_right = 216.0
+margin_bottom = 244.0
+texture = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnemyPanel/EnemyContainerFirst"]
+root_node = NodePath("../Enemy")
+anims/Cataracta = SubResource( 37 )
+anims/Ignis = SubResource( 38 )
+anims/Normal = SubResource( 41 )
+anims/RESET = SubResource( 39 )
+anims/Tonitruum = SubResource( 40 )
+anims/Umbra = SubResource( 43 )
+anims/Ventus = SubResource( 42 )
+
+[node name="EnemyContainerLeft" type="VBoxContainer" parent="EnemyPanel"]
+visible = false
+margin_left = 517.0
+margin_right = 733.0
+margin_bottom = 244.0
+
+[node name="Label" type="Label" parent="EnemyPanel/EnemyContainerLeft"]
+margin_right = 216.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 7 )
+text = "Demon"
+uppercase = true
+
+[node name="HP" type="ProgressBar" parent="EnemyPanel/EnemyContainerLeft"]
+margin_top = 29.0
+margin_right = 216.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 100, 15 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Enemy" type="TextureRect" parent="EnemyPanel/EnemyContainerLeft"]
+margin_top = 48.0
+margin_right = 216.0
+margin_bottom = 244.0
+texture = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnemyPanel/EnemyContainerLeft"]
+root_node = NodePath("../Enemy")
+anims/Cataracta = SubResource( 44 )
+anims/Ignis = SubResource( 45 )
+anims/Normal = SubResource( 46 )
+anims/RESET = SubResource( 47 )
+anims/Tonitruum = SubResource( 48 )
+anims/Umbra = SubResource( 49 )
+anims/Ventus = SubResource( 50 )
+
+[node name="EnemyContainerCenter" type="VBoxContainer" parent="EnemyPanel"]
+visible = false
+margin_left = 517.0
+margin_right = 733.0
+margin_bottom = 244.0
+
+[node name="Label" type="Label" parent="EnemyPanel/EnemyContainerCenter"]
+margin_right = 216.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 7 )
+text = "Demon"
+uppercase = true
+
+[node name="HP" type="ProgressBar" parent="EnemyPanel/EnemyContainerCenter"]
+margin_top = 29.0
+margin_right = 216.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 100, 15 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Enemy" type="TextureRect" parent="EnemyPanel/EnemyContainerCenter"]
+margin_top = 48.0
+margin_right = 216.0
+margin_bottom = 244.0
+texture = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnemyPanel/EnemyContainerCenter"]
+root_node = NodePath("../Enemy")
+anims/Cataracta = SubResource( 51 )
+anims/Ignis = SubResource( 52 )
+anims/Normal = SubResource( 53 )
+anims/RESET = SubResource( 54 )
+anims/Tonitruum = SubResource( 55 )
+anims/Umbra = SubResource( 56 )
+anims/Ventus = SubResource( 57 )
+
+[node name="EnemyContainerRight" type="VBoxContainer" parent="EnemyPanel"]
+visible = false
+margin_left = 630.0
+margin_right = 846.0
+margin_bottom = 244.0
+
+[node name="Label" type="Label" parent="EnemyPanel/EnemyContainerRight"]
+margin_right = 216.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 7 )
+text = "Demon"
+uppercase = true
+
+[node name="HP" type="ProgressBar" parent="EnemyPanel/EnemyContainerRight"]
+margin_top = 29.0
+margin_right = 216.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 100, 15 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Enemy" type="TextureRect" parent="EnemyPanel/EnemyContainerRight"]
+margin_top = 48.0
+margin_right = 216.0
+margin_bottom = 244.0
+texture = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnemyPanel/EnemyContainerRight"]
+root_node = NodePath("../Enemy")
+anims/Cataracta = SubResource( 58 )
+anims/Ignis = SubResource( 59 )
+anims/Normal = SubResource( 60 )
+anims/RESET = SubResource( 61 )
+anims/Tonitruum = SubResource( 62 )
+anims/Umbra = SubResource( 63 )
+anims/Ventus = SubResource( 64 )
+
+[node name="EnemyContainerLast" type="VBoxContainer" parent="EnemyPanel"]
+visible = false
+margin_left = 404.0
+margin_right = 620.0
+margin_bottom = 244.0
+
+[node name="Label" type="Label" parent="EnemyPanel/EnemyContainerLast"]
+margin_right = 216.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 7 )
+text = "Demon"
+uppercase = true
+
+[node name="HP" type="ProgressBar" parent="EnemyPanel/EnemyContainerLast"]
+margin_top = 29.0
+margin_right = 216.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 100, 15 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Value" type="Label" parent="EnemyPanel/EnemyContainerLast/HP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "9999/9999"
+align = 1
+valign = 1
+
+[node name="Enemy" type="TextureRect" parent="EnemyPanel/EnemyContainerLast"]
+margin_top = 48.0
+margin_right = 216.0
+margin_bottom = 244.0
+texture = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnemyPanel/EnemyContainerLast"]
+root_node = NodePath("../Enemy")
+anims/Cataracta = SubResource( 65 )
+anims/Ignis = SubResource( 66 )
+anims/Normal = SubResource( 67 )
+anims/RESET = SubResource( 68 )
+anims/Tonitruum = SubResource( 69 )
+anims/Umbra = SubResource( 70 )
+anims/Ventus = SubResource( 71 )
+
+[node name="PlayerPanel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -512.0
+margin_top = -100.0
+margin_right = 512.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -487.0
+margin_top = -34.0
+margin_right = 487.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 974, 64 )
+custom_constants/separation = 100
+alignment = 1
+
+[node name="PlayerData1" type="HBoxContainer" parent="PlayerPanel/HBoxContainer"]
+margin_left = 135.0
+margin_right = 303.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="PlayerPanel/HBoxContainer/PlayerData1"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Container" type="VBoxContainer" parent="PlayerPanel/HBoxContainer/PlayerData1"]
+margin_left = 68.0
+margin_right = 168.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 64 )
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="PlayerName" type="Label" parent="PlayerPanel/HBoxContainer/PlayerData1/Container"]
+margin_top = 1.0
+margin_right = 100.0
+margin_bottom = 26.0
+custom_fonts/font = ExtResource( 7 )
+text = "Player"
+uppercase = true
+
+[node name="HP" type="ProgressBar" parent="PlayerPanel/HBoxContainer/PlayerData1/Container"]
+margin_top = 30.0
+margin_right = 100.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 100, 15 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Value" type="Label" parent="PlayerPanel/HBoxContainer/PlayerData1/Container/HP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "9999/9999"
+align = 1
+valign = 1
+
+[node name="MP" type="ProgressBar" parent="PlayerPanel/HBoxContainer/PlayerData1/Container"]
+margin_top = 49.0
+margin_right = 100.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 15 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Value" type="Label" parent="PlayerPanel/HBoxContainer/PlayerData1/Container/MP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "9999/9999"
+align = 1
+valign = 1
+
+[node name="PlayerData2" type="HBoxContainer" parent="PlayerPanel/HBoxContainer"]
+margin_left = 403.0
+margin_right = 571.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="PlayerPanel/HBoxContainer/PlayerData2"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Container" type="VBoxContainer" parent="PlayerPanel/HBoxContainer/PlayerData2"]
+margin_left = 68.0
+margin_right = 168.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 64 )
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="PlayerName" type="Label" parent="PlayerPanel/HBoxContainer/PlayerData2/Container"]
+margin_top = 1.0
+margin_right = 100.0
+margin_bottom = 26.0
+custom_fonts/font = ExtResource( 7 )
+text = "Player2"
+uppercase = true
+
+[node name="HP" type="ProgressBar" parent="PlayerPanel/HBoxContainer/PlayerData2/Container"]
+margin_top = 30.0
+margin_right = 100.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 100, 15 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Value" type="Label" parent="PlayerPanel/HBoxContainer/PlayerData2/Container/HP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "9999/9999"
+align = 1
+valign = 1
+
+[node name="MP" type="ProgressBar" parent="PlayerPanel/HBoxContainer/PlayerData2/Container"]
+margin_top = 49.0
+margin_right = 100.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 15 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Value" type="Label" parent="PlayerPanel/HBoxContainer/PlayerData2/Container/MP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "9999/9999"
+align = 1
+valign = 1
+
+[node name="PlayerData3" type="HBoxContainer" parent="PlayerPanel/HBoxContainer"]
+margin_left = 671.0
+margin_right = 839.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="PlayerPanel/HBoxContainer/PlayerData3"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Container" type="VBoxContainer" parent="PlayerPanel/HBoxContainer/PlayerData3"]
+margin_left = 68.0
+margin_right = 168.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 64 )
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="PlayerName" type="Label" parent="PlayerPanel/HBoxContainer/PlayerData3/Container"]
+margin_top = 1.0
+margin_right = 100.0
+margin_bottom = 26.0
+custom_fonts/font = ExtResource( 7 )
+text = "Player3"
+uppercase = true
+
+[node name="HP" type="ProgressBar" parent="PlayerPanel/HBoxContainer/PlayerData3/Container"]
+margin_top = 30.0
+margin_right = 100.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 100, 15 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Value" type="Label" parent="PlayerPanel/HBoxContainer/PlayerData3/Container/HP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "9999/9999"
+align = 1
+valign = 1
+
+[node name="MP" type="ProgressBar" parent="PlayerPanel/HBoxContainer/PlayerData3/Container"]
+margin_top = 49.0
+margin_right = 100.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 15 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 2 )
+max_value = 999.0
+percent_visible = false
+
+[node name="Value" type="Label" parent="PlayerPanel/HBoxContainer/PlayerData3/Container/MP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0.298039, 0.298039, 0.298039, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "9999/9999"
+align = 1
+valign = 1
+
+[node name="ActionsPanel" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = -275.0
+margin_bottom = -100.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Actions" type="VBoxContainer" parent="ActionsPanel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -75.0
+margin_right = 150.0
+margin_bottom = 75.0
+
+[node name="Attack" type="Button" parent="ActionsPanel/Actions"]
+margin_right = 150.0
+margin_bottom = 47.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 74 )
+custom_styles/normal = SubResource( 6 )
+text = "Attack"
+
+[node name="Pass" type="Button" parent="ActionsPanel/Actions"]
+margin_top = 51.0
+margin_right = 150.0
+margin_bottom = 98.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 74 )
+custom_styles/normal = SubResource( 6 )
+text = "Pass"
+
+[node name="Run" type="Button" parent="ActionsPanel/Actions"]
+margin_top = 102.0
+margin_right = 150.0
+margin_bottom = 150.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 74 )
+custom_styles/normal = SubResource( 6 )
+text = "Run"
+
+[node name="SkillsPanel" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = -275.0
+margin_bottom = -100.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Actions" type="VBoxContainer" parent="SkillsPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -79.0
+margin_right = 75.0
+margin_bottom = 79.0
+
+[node name="Skill1" type="Button" parent="SkillsPanel/Actions"]
+margin_right = 150.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 73 )
+custom_styles/normal = SubResource( 31 )
+text = "Skill"
+
+[node name="Skill2" type="Button" parent="SkillsPanel/Actions"]
+margin_top = 27.0
+margin_right = 150.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 73 )
+custom_styles/normal = SubResource( 31 )
+text = "Skill"
+
+[node name="Skill3" type="Button" parent="SkillsPanel/Actions"]
+margin_top = 54.0
+margin_right = 150.0
+margin_bottom = 77.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 73 )
+custom_styles/normal = SubResource( 31 )
+text = "Skill"
+
+[node name="Skill4" type="Button" parent="SkillsPanel/Actions"]
+margin_top = 81.0
+margin_right = 150.0
+margin_bottom = 104.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 73 )
+custom_styles/normal = SubResource( 31 )
+text = "Skill"
+
+[node name="Skill5" type="Button" parent="SkillsPanel/Actions"]
+margin_top = 108.0
+margin_right = 150.0
+margin_bottom = 131.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 73 )
+custom_styles/normal = SubResource( 31 )
+text = "Skill"
+
+[node name="ReturnToActions" type="Button" parent="SkillsPanel/Actions"]
+margin_top = 135.0
+margin_right = 150.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 73 )
+custom_styles/normal = SubResource( 31 )
+text = "Return"
+
+[node name="TargetPanel" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = -275.0
+margin_bottom = -100.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Actions" type="VBoxContainer" parent="TargetPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -79.0
+margin_right = 75.0
+margin_bottom = 79.0
+
+[node name="Target1" type="Button" parent="TargetPanel/Actions"]
+margin_right = 150.0
+margin_bottom = 23.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 36 )
+custom_styles/pressed = SubResource( 72 )
+custom_styles/normal = SubResource( 33 )
+text = "Target 1"
+
+[node name="Target2" type="Button" parent="TargetPanel/Actions"]
+margin_top = 27.0
+margin_right = 150.0
+margin_bottom = 50.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 36 )
+custom_styles/pressed = SubResource( 72 )
+custom_styles/normal = SubResource( 35 )
+text = "Target 2"
+
+[node name="Target3" type="Button" parent="TargetPanel/Actions"]
+margin_top = 54.0
+margin_right = 150.0
+margin_bottom = 77.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 36 )
+custom_styles/pressed = SubResource( 72 )
+custom_styles/normal = SubResource( 35 )
+text = "Target 3"
+
+[node name="Target4" type="Button" parent="TargetPanel/Actions"]
+margin_top = 81.0
+margin_right = 150.0
+margin_bottom = 104.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 36 )
+custom_styles/pressed = SubResource( 72 )
+custom_styles/normal = SubResource( 35 )
+text = "Target 4"
+
+[node name="Target5" type="Button" parent="TargetPanel/Actions"]
+margin_top = 108.0
+margin_right = 150.0
+margin_bottom = 131.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 36 )
+custom_styles/pressed = SubResource( 72 )
+custom_styles/normal = SubResource( 35 )
+text = "Target 5"
+
+[node name="ReturnToSkills" type="Button" parent="TargetPanel/Actions"]
+margin_top = 135.0
+margin_right = 150.0
+margin_bottom = 158.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 8 )
+custom_styles/hover = SubResource( 36 )
+custom_styles/pressed = SubResource( 72 )
+custom_styles/normal = SubResource( 35 )
+text = "Return"
+
+[node name="Textbox" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -201.0
+margin_top = -310.0
+margin_right = 201.0
+margin_bottom = -270.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Label" type="Label" parent="Textbox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 8 )
+text = "Magaru"
+align = 1
+valign = 1
+
+[node name="MoonPhaseRect" type="ColorRect" parent="."]
+margin_left = 34.0
+margin_top = -9.0
+margin_right = 94.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 60, 60 )
+rect_rotation = 45.0
+color = Color( 0.211765, 0.454902, 0.533333, 1 )
+
+[node name="MoonSprite" type="AnimatedSprite" parent="MoonPhaseRect"]
+position = Vector2( 30, 30 )
+rotation = -0.785398
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 29 )
+animation = "moon"
+
+[node name="Camera2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 513, 383 )
+current = true
+
+[node name="FPS" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -64.0
+margin_top = 8.0
+margin_bottom = 22.0
+custom_colors/font_color = Color( 1, 0.988235, 0.988235, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "FPS: 120"
+
+[node name="Order" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -64.0
+margin_top = 32.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 1, 0.988235, 0.988235, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "ORDER"
+
+[connection signal="pressed" from="ActionsPanel/Actions/Attack" to="." method="_on_Attack_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Pass" to="." method="_on_Pass_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Run" to="." method="_on_Run_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/Skill1" to="." method="_on_Skill1_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/Skill2" to="." method="_on_Skill2_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/Skill3" to="." method="_on_Skill3_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/Skill4" to="." method="_on_Skill4_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/Skill5" to="." method="_on_Skill5_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/ReturnToActions" to="." method="_on_ReturnToActions_pressed"]
+[connection signal="pressed" from="TargetPanel/Actions/Target1" to="." method="_on_Target1_pressed"]
+[connection signal="pressed" from="TargetPanel/Actions/Target2" to="." method="_on_Target2_pressed"]
+[connection signal="pressed" from="TargetPanel/Actions/Target3" to="." method="_on_Target3_pressed"]
+[connection signal="pressed" from="TargetPanel/Actions/Target4" to="." method="_on_Target4_pressed"]
+[connection signal="pressed" from="TargetPanel/Actions/Target5" to="." method="_on_Target5_pressed"]
+[connection signal="pressed" from="TargetPanel/Actions/ReturnToSkills" to="." method="_on_ReturnToSkills_pressed"]

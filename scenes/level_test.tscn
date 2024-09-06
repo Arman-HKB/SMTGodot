@@ -1,0 +1,309 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://addons/level_block/default_material.tres" type="Material" id=1]
+[ext_resource path="res://scenes/entity/minimap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/entity/player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/level_block/level_block_node.gd" type="Script" id=4]
+[ext_resource path="res://scenes/level_test.gd" type="Script" id=5]
+[ext_resource path="res://assets/npc/demons.png" type="Texture" id=6]
+[ext_resource path="res://assets/tileset.png" type="Texture" id=7]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+ambient_light_color = Color( 1, 1, 1, 1 )
+fog_depth_begin = 42.5
+fog_depth_end = 4000.0
+ssao_radius = 5.87
+ssao_intensity = 128.0
+ssao_intensity2 = 0.0
+ssao_bias = 0.001
+ssao_quality = 0
+ssao_edge_sharpness = 0.0
+dof_blur_far_quality = 0
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 16
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 16
+atlas = ExtResource( 6 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 16
+atlas = ExtResource( 6 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 16
+atlas = ExtResource( 6 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 16
+atlas = ExtResource( 6 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 16
+atlas = ExtResource( 6 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 16
+atlas = ExtResource( 6 )
+region = Rect2( 600, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 16
+atlas = ExtResource( 6 )
+region = Rect2( 700, 0, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 5 )
+
+[node name="Blocks" type="Spatial" parent="."]
+
+[node name="LevelBlockDoor2" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+south_face = 0
+top_face = 3
+bottom_face = 2
+
+[node name="LevelBlock3" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+east_face = 0
+south_face = 0
+top_face = 3
+bottom_face = 2
+
+[node name="LevelBlock5" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+south_face = 0
+west_face = 0
+top_face = 3
+bottom_face = 2
+
+[node name="LevelBlock12" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+bottom_face = 6
+
+[node name="LevelBlock13" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+bottom_face = 6
+
+[node name="LevelBlock14" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+bottom_face = 6
+
+[node name="LevelBlock15" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+bottom_face = 6
+
+[node name="LevelBlock16" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+bottom_face = 6
+
+[node name="LevelBlock17" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+bottom_face = 6
+
+[node name="LevelBlock18" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+bottom_face = 6
+
+[node name="LevelBlock19" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, 0 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+bottom_face = 6
+
+[node name="LevelBlock20" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+bottom_face = 6
+
+[node name="LevelBlock6" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+west_face = 0
+top_face = 3
+bottom_face = 2
+
+[node name="LevelBlock10" type="Spatial" parent="Blocks"]
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+top_face = 3
+bottom_face = 2
+
+[node name="LevelBlock11" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+east_face = 0
+top_face = 3
+bottom_face = 2
+
+[node name="LevelBlock7" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+north_face = 0
+west_face = 0
+top_face = 3
+bottom_face = 2
+
+[node name="LevelBlock8" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+north_face = 0
+top_face = 3
+bottom_face = 2
+
+[node name="LevelBlock9" type="Spatial" parent="Blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 1 )
+texture_sheet = ExtResource( 7 )
+texture_size = 64.0
+north_face = 0
+east_face = 0
+top_face = 3
+bottom_face = 2
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 2.13163e-14, 0, 1, 0, -2.13163e-14, 0, 1, -1.19209e-07, 0, 2 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="NPC_Pixie" type="AnimatedSprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, -2 )
+visible = false
+billboard = 2
+render_priority = 1
+frames = SubResource( 2 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="NPC_JackFrost" type="AnimatedSprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.3, -2 )
+visible = false
+billboard = 2
+render_priority = 1
+frames = SubResource( 6 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="NPC_PyroJack" type="AnimatedSprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.3, 2 )
+visible = false
+billboard = 2
+render_priority = 1
+frames = SubResource( 24 )
+animation = "idle"
+playing = true
+
+[node name="NPC_Nekomata" type="AnimatedSprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.3, -2 )
+visible = false
+billboard = 2
+render_priority = 1
+frames = SubResource( 13 )
+animation = "idle"
+playing = true
+
+[node name="Minimap" parent="." instance=ExtResource( 2 )]

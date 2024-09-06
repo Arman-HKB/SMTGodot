@@ -1,0 +1,217 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://assets/moon.png" type="Texture" id=1]
+[ext_resource path="res://scenes/entity/minimap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/portraits/portrait_default.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 600, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 700, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 800, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 900, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 1000, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 1100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 1200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 1300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 1400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 1500, 0, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "moon",
+"speed": 5.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 0.607843 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.521569, 0.14902, 0.14902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.14902, 0.25098, 0.521569, 1 )
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="FPS" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -64.0
+margin_top = 120.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 1, 0.988235, 0.988235, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "FPS: 120"
+
+[node name="DirectionRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -28.0
+margin_top = 10.0
+margin_right = 28.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 56, 20 )
+color = Color( 0.211765, 0.454902, 0.533333, 1 )
+
+[node name="Label" type="Label" parent="DirectionRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -7.0
+margin_right = 51.0
+margin_bottom = 7.0
+text = "NORTH"
+align = 1
+valign = 1
+
+[node name="MoonPhaseRect" type="ColorRect" parent="."]
+margin_left = 34.0
+margin_top = -9.0
+margin_right = 94.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 60, 60 )
+rect_rotation = 45.0
+color = Color( 0.211765, 0.454902, 0.533333, 1 )
+
+[node name="MoonSprite" type="AnimatedSprite" parent="MoonPhaseRect"]
+position = Vector2( 30, 30 )
+rotation = -0.785398
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 17 )
+animation = "moon"
+
+[node name="Minimap" parent="." instance=ExtResource( 2 )]
+
+[node name="PlayerPanel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -512.0
+margin_top = -100.0
+margin_right = 512.0
+custom_styles/panel = SubResource( 18 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -487.0
+margin_top = -34.0
+margin_right = 487.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 974, 64 )
+custom_constants/separation = 100
+
+[node name="PlayerData" type="HBoxContainer" parent="PlayerPanel/HBoxContainer"]
+margin_right = 168.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+alignment = 1
+
+[node name="Portrait" type="TextureRect" parent="PlayerPanel/HBoxContainer/PlayerData"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Container" type="VBoxContainer" parent="PlayerPanel/HBoxContainer/PlayerData"]
+margin_left = 68.0
+margin_right = 168.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 64 )
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="PlayerName" type="Label" parent="PlayerPanel/HBoxContainer/PlayerData/Container"]
+margin_top = 22.0
+margin_right = 100.0
+margin_bottom = 36.0
+text = "Player"
+uppercase = true
+
+[node name="HP" type="ProgressBar" parent="PlayerPanel/HBoxContainer/PlayerData/Container"]
+margin_top = 40.0
+margin_right = 100.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 10 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 19 )
+custom_styles/bg = SubResource( 20 )
+max_value = 999.0
+percent_visible = false
+
+[node name="MP" type="ProgressBar" parent="PlayerPanel/HBoxContainer/PlayerData/Container"]
+margin_top = 54.0
+margin_right = 100.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 100, 10 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 21 )
+custom_styles/bg = SubResource( 20 )
+max_value = 999.0
+percent_visible = false

@@ -1,0 +1,721 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://assets/abstract_tileset.png" type="Texture" id=1]
+[ext_resource path="res://addons/level_block/default_material.tres" type="Material" id=2]
+[ext_resource path="res://scripts/battle/battle_3d.gd" type="Script" id=3]
+[ext_resource path="res://addons/level_block/level_block_node.gd" type="Script" id=4]
+[ext_resource path="res://assets/battlers/lancelot.png" type="Texture" id=8]
+[ext_resource path="res://assets/battlers/medusa.png" type="Texture" id=9]
+[ext_resource path="res://assets/battlers/scathach.png" type="Texture" id=10]
+[ext_resource path="res://assets/moon.png" type="Texture" id=11]
+[ext_resource path="res://fonts/menus.tres" type="DynamicFont" id=12]
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 11 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 11 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 11 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 11 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 11 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 11 )
+region = Rect2( 600, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 11 )
+region = Rect2( 700, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 11 )
+region = Rect2( 800, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 11 )
+region = Rect2( 900, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 11 )
+region = Rect2( 1000, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 11 )
+region = Rect2( 1100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 11 )
+region = Rect2( 1200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 11 )
+region = Rect2( 1300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 11 )
+region = Rect2( 1400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 11 )
+region = Rect2( 1500, 0, 100, 100 )
+
+[sub_resource type="SpriteFrames" id=32]
+animations = [ {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 75 ), SubResource( 76 ), SubResource( 16 ) ],
+"loop": true,
+"name": "moon",
+"speed": 5.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=77]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 0.607843 )
+
+[sub_resource type="StyleBoxFlat" id=78]
+bg_color = Color( 0.196078, 0.333333, 0.376471, 1 )
+
+[sub_resource type="StyleBoxFlat" id=79]
+bg_color = Color( 0.0941176, 0.305882, 0.376471, 1 )
+
+[sub_resource type="StyleBoxFlat" id=80]
+bg_color = Color( 0.211765, 0.454902, 0.533333, 1 )
+
+[sub_resource type="StyleBoxFlat" id=81]
+bg_color = Color( 0.211765, 0.454902, 0.533333, 1 )
+
+[sub_resource type="StyleBoxFlat" id=82]
+bg_color = Color( 0.207843, 0.423529, 0.490196, 1 )
+
+[sub_resource type="StyleBoxFlat" id=83]
+bg_color = Color( 0.286275, 0.501961, 0.572549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=84]
+bg_color = Color( 0.286275, 0.501961, 0.572549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=85]
+bg_color = Color( 0.240938, 0.436333, 0.501465, 1 )
+
+[sub_resource type="StyleBoxFlat" id=86]
+bg_color = Color( 0.356863, 0.556863, 0.623529, 1 )
+
+[sub_resource type="StyleBoxFlat" id=87]
+bg_color = Color( 0.356863, 0.556863, 0.623529, 1 )
+
+[sub_resource type="StyleBoxFlat" id=88]
+bg_color = Color( 0.0666667, 0.0666667, 0.0666667, 0.607843 )
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+background_color = Color( 0.027451, 0.027451, 0.027451, 1 )
+ambient_light_color = Color( 1, 1, 1, 1 )
+fog_depth_begin = 42.5
+fog_depth_end = 4000.0
+ssao_radius = 5.87
+ssao_intensity = 128.0
+ssao_intensity2 = 0.0
+ssao_bias = 0.001
+ssao_quality = 0
+ssao_edge_sharpness = 0.0
+dof_blur_far_quality = 0
+
+[node name="battle_3d" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="blocks" type="Spatial" parent="."]
+
+[node name="LevelBlock1" type="Spatial" parent="blocks"]
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock5" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock6" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock2" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock3" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock8" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock9" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock10" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock12" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock13" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock15" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock16" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock17" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock19" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock20" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock29" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock30" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock31" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock33" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock34" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock36" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock37" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock38" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock40" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="LevelBlock41" type="Spatial" parent="blocks"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4 )
+script = ExtResource( 4 )
+material = ExtResource( 2 )
+texture_sheet = ExtResource( 1 )
+texture_size = 256.0
+bottom_face = 9
+
+[node name="enemies" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="heroes" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+
+[node name="hero" type="Spatial" parent="heroes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2 )
+
+[node name="sprite" type="AnimatedSprite3D" parent="heroes/hero"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 1, 0, -0.25, 0 )
+pixel_size = 0.003
+billboard = 2
+render_priority = 1
+frames = SubResource( 13 )
+animation = "idle"
+playing = true
+
+[node name="hero2" type="Spatial" parent="heroes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+
+[node name="sprite" type="AnimatedSprite3D" parent="heroes/hero2"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 1, 0, -0.25, 0 )
+pixel_size = 0.003
+billboard = 2
+render_priority = 1
+frames = SubResource( 14 )
+animation = "idle"
+playing = true
+
+[node name="hero3" type="Spatial" parent="heroes"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2 )
+
+[node name="sprite" type="AnimatedSprite3D" parent="heroes/hero3"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 1, 0, -0.25, 0 )
+pixel_size = 0.003
+billboard = 2
+render_priority = 1
+frames = SubResource( 15 )
+animation = "idle"
+playing = true
+
+[node name="MoonPhaseRect" type="ColorRect" parent="."]
+margin_left = 34.0
+margin_top = -9.0
+margin_right = 94.0
+margin_bottom = 51.0
+rect_min_size = Vector2( 60, 60 )
+rect_rotation = 45.0
+color = Color( 0.211765, 0.454902, 0.533333, 1 )
+
+[node name="MoonSprite" type="AnimatedSprite" parent="MoonPhaseRect"]
+position = Vector2( 30, 30 )
+rotation = -0.785398
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 32 )
+animation = "moon"
+
+[node name="PlayerPanel" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -487.0
+margin_top = 300.0
+margin_right = 487.0
+margin_bottom = 364.0
+rect_min_size = Vector2( 974, 64 )
+custom_constants/separation = 100
+alignment = 1
+
+[node name="ActionsPanel" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -250.0
+margin_top = -275.0
+margin_right = -100.0
+margin_bottom = -100.0
+custom_styles/panel = SubResource( 77 )
+
+[node name="Actions" type="VBoxContainer" parent="ActionsPanel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -75.0
+margin_right = 150.0
+margin_bottom = 75.0
+
+[node name="Attack" type="Button" parent="ActionsPanel/Actions"]
+margin_right = 150.0
+margin_bottom = 47.0
+rect_pivot_offset = Vector2( -484, -30.5 )
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 78 )
+custom_styles/pressed = SubResource( 79 )
+custom_styles/normal = SubResource( 80 )
+text = "Attack"
+
+[node name="Pass" type="Button" parent="ActionsPanel/Actions"]
+margin_top = 51.0
+margin_right = 150.0
+margin_bottom = 98.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 78 )
+custom_styles/pressed = SubResource( 79 )
+custom_styles/normal = SubResource( 80 )
+text = "Pass"
+
+[node name="Run" type="Button" parent="ActionsPanel/Actions"]
+margin_top = 102.0
+margin_right = 150.0
+margin_bottom = 150.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 78 )
+custom_styles/pressed = SubResource( 79 )
+custom_styles/normal = SubResource( 80 )
+text = "Run"
+
+[node name="SkillsPanel" type="Panel" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -250.0
+margin_top = -275.0
+margin_right = -100.0
+margin_bottom = -100.0
+custom_styles/panel = SubResource( 77 )
+
+[node name="Actions" type="VBoxContainer" parent="SkillsPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -79.0
+margin_right = 75.0
+margin_bottom = 79.0
+
+[node name="Skill1" type="Button" parent="SkillsPanel/Actions"]
+margin_right = 150.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 81 )
+custom_styles/pressed = SubResource( 82 )
+custom_styles/normal = SubResource( 83 )
+text = "Skill"
+
+[node name="Skill2" type="Button" parent="SkillsPanel/Actions"]
+margin_top = 27.0
+margin_right = 150.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 81 )
+custom_styles/pressed = SubResource( 82 )
+custom_styles/normal = SubResource( 83 )
+text = "Skill"
+
+[node name="Skill3" type="Button" parent="SkillsPanel/Actions"]
+margin_top = 54.0
+margin_right = 150.0
+margin_bottom = 77.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 81 )
+custom_styles/pressed = SubResource( 82 )
+custom_styles/normal = SubResource( 83 )
+text = "Skill"
+
+[node name="Skill4" type="Button" parent="SkillsPanel/Actions"]
+margin_top = 81.0
+margin_right = 150.0
+margin_bottom = 104.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 81 )
+custom_styles/pressed = SubResource( 82 )
+custom_styles/normal = SubResource( 83 )
+text = "Skill"
+
+[node name="Skill5" type="Button" parent="SkillsPanel/Actions"]
+margin_top = 108.0
+margin_right = 150.0
+margin_bottom = 131.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 81 )
+custom_styles/pressed = SubResource( 82 )
+custom_styles/normal = SubResource( 83 )
+text = "Skill"
+
+[node name="ReturnToActions" type="Button" parent="SkillsPanel/Actions"]
+margin_top = 135.0
+margin_right = 150.0
+margin_bottom = 158.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 81 )
+custom_styles/pressed = SubResource( 82 )
+custom_styles/normal = SubResource( 83 )
+text = "Return"
+
+[node name="TargetPanel" type="Panel" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -250.0
+margin_top = -275.0
+margin_right = -100.0
+margin_bottom = -100.0
+custom_styles/panel = SubResource( 77 )
+
+[node name="Actions" type="VBoxContainer" parent="TargetPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -79.0
+margin_right = 75.0
+margin_bottom = 79.0
+
+[node name="Target1" type="Button" parent="TargetPanel/Actions"]
+margin_right = 150.0
+margin_bottom = 23.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 84 )
+custom_styles/pressed = SubResource( 85 )
+custom_styles/normal = SubResource( 86 )
+text = "Target 1"
+
+[node name="Target2" type="Button" parent="TargetPanel/Actions"]
+margin_top = 27.0
+margin_right = 150.0
+margin_bottom = 50.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 84 )
+custom_styles/pressed = SubResource( 85 )
+custom_styles/normal = SubResource( 87 )
+text = "Target 2"
+
+[node name="Target3" type="Button" parent="TargetPanel/Actions"]
+margin_top = 54.0
+margin_right = 150.0
+margin_bottom = 77.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 84 )
+custom_styles/pressed = SubResource( 85 )
+custom_styles/normal = SubResource( 87 )
+text = "Target 3"
+
+[node name="Target4" type="Button" parent="TargetPanel/Actions"]
+margin_top = 81.0
+margin_right = 150.0
+margin_bottom = 104.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 84 )
+custom_styles/pressed = SubResource( 85 )
+custom_styles/normal = SubResource( 87 )
+text = "Target 4"
+
+[node name="Target5" type="Button" parent="TargetPanel/Actions"]
+margin_top = 108.0
+margin_right = 150.0
+margin_bottom = 131.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 84 )
+custom_styles/pressed = SubResource( 85 )
+custom_styles/normal = SubResource( 87 )
+text = "Target 5"
+
+[node name="ReturnToSkills" type="Button" parent="TargetPanel/Actions"]
+margin_top = 135.0
+margin_right = 150.0
+margin_bottom = 158.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 12 )
+custom_styles/hover = SubResource( 84 )
+custom_styles/pressed = SubResource( 85 )
+custom_styles/normal = SubResource( 87 )
+text = "Return"
+
+[node name="Textbox" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -201.0
+margin_top = -310.0
+margin_right = 201.0
+margin_bottom = -270.0
+custom_styles/panel = SubResource( 88 )
+
+[node name="Label" type="Label" parent="Textbox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 12 )
+text = "Magaru"
+align = 1
+valign = 1
+
+[node name="FPS" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -64.0
+margin_top = 8.0
+margin_bottom = 22.0
+custom_colors/font_color = Color( 1, 0.988235, 0.988235, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "FPS: 120"
+
+[node name="Order" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -64.0
+margin_top = 32.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 1, 0.988235, 0.988235, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "ORDER"
+
+[node name="worldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.73038, -0.25, 0.635646, 0.006236, 0.933013, 0.359789, -0.683013, -0.258819, 0.683013, 5, 2, 5 )
+keep_aspect = 0
+
+[connection signal="pressed" from="ActionsPanel/Actions/Attack" to="." method="_on_Attack_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Pass" to="." method="_on_Pass_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Run" to="." method="_on_Run_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/Skill1" to="." method="_on_Skill1_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/Skill2" to="." method="_on_Skill2_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/Skill3" to="." method="_on_Skill3_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/Skill4" to="." method="_on_Skill4_pressed"]
+[connection signal="pressed" from="SkillsPanel/Actions/Skill5" to="." method="_on_Skill5_pressed"]
+[connection signal="pressed" from="TargetPanel/Actions/Target1" to="." method="_on_Target1_pressed"]
+[connection signal="pressed" from="TargetPanel/Actions/Target2" to="." method="_on_Target2_pressed"]
+[connection signal="pressed" from="TargetPanel/Actions/Target3" to="." method="_on_Target3_pressed"]

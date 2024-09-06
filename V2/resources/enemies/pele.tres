@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://scripts/enemy.gd" type="Script" id=1]
+[ext_resource path="res://assets/battlers/pele.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "Fire Nymph"
+texture = ExtResource( 2 )
+max_hp = 120
+max_mp = 70
+current_hp = 120
+current_mp = 70
+strength = 4
+magic = 8
+vitality = 4
+agility = 4
+luck = 5
+weaknesses = [ [ "Phys", 0 ], [ "Pierce", 0 ], [ "Fire", 2 ], [ "Water", 1 ], [ "Elec", 0 ], [ "Wind", 2 ], [ "Sun", 0 ], [ "Moon", 0 ], [ "Divine", 0 ] ]
+skills = [ [ "Punch", 1, 1, 20, 0, 0 ], [ "Ignis", 1, 1, 30, 2, 4 ] ]
